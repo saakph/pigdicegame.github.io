@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title> Saakshi Phatak | Dice Game </title>
+
+        <!-- Link JS and CSS -->
+        <link rel="stylesheet" href="style.css">
+        <script src="code.js" defer></script>
+
+        <!-- Link Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Ojuju:wght@200..800&family=Yatra+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <!-- Header -->
+        <h1> Pig Dice </h1>
+
+        <!-- Game Menu -->
+        <div id = "game-menu">
+            
+            <!-- Directions -->
+            <h3> Pig Dice is a dice game based on greed and luck. </h3>
+            <h3> Each player takes turns rolling the dice, and their score is counted as the total of the two dice. However, if a player rolls a single one, nothing is added to their score for that round. If a player rolls double one's, their score is reset to 0. The first person to reach a total score of 100 wins the game! </h3> 
+            <h4> Are you ready? </h4>
+            
+            <!-- Start Game Button -->
+            <button id = "start-game-button" onclick = "showInputSection()"> Begin </button>
+            
+        </div>
+
+        <!-- Main Game -->
+        <div id = "main-game">
+            
+    
+            <!-- Scoreboard -->
+            <div id = "scoreboard-section">
+                <h2> Scoreboard </h2>
+                
+            </div>
+            
+            <!-- Current Turn Section -->
+            <div id = "turn-display">
+                
+                <!-- Images -->
+                <h2 id = "dice-header"></h2>
+                <img id = "dice-1" src = "images/Blue_01.png">
+                <img id = "dice-2" src = "images/Blue_01.png">
+                
+                <!-- Buttons -->
+                <div id = "button-container">
+                    <button id = "roll-dice-button" onclick = "rollDice()"> Roll </button>
+                    <button id = "pass-turn-button" onclick = "passTurn()"> Pass Turn </button>
+                </div>
+                    
+                <!-- Current Turn Display -->
+                <div id = "current-player-turn"></div>
+                
+            </div>
+            
+            
+            <!-- Player History Section -->
+            <div id = "player-history-section">
+                
+                <button id = "toggle-history-button" onclick = "toggleHistory()"> Game History </button>
+                <textarea disabled = "true" id = "display-section" placeholder="No one has gone yet..."></textarea>
+                
+            </div>
+            
+        </div>
+
+        <!-- Prompt User for Player Names -->
+        <div id = "user-input-section">
+            
+            <!-- User Input -->
+            <label for = "user-input" id = "user-input-label"> Enter Player 1's Name: </label>
+            <h5> Press enter to submit each name, click Done to finish. You can have between 2 to 6 players. </h5>
+            <input autocomplete="off" id = "user-input" type = "text">
+            
+            <!-- Done Button -->
+            <button id = "done-button" onclick = "startGame()"> Done </button>
+            
+            <!-- Show List -->
+            <p id = "display-player-list"> Current Players: None </p>
+            
+        </div>
+
+        <!-- Display Winner -->
+        <h2 id = "display-winner"></h2>
+        
+    </body>
+
+</html>
